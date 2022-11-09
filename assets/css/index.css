@@ -1,0 +1,67 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main {
+    background-color: rgb(182, 179, 126);
+    padding: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    gap: 40px;
+    width: 100wh;
+    height: calc(100vh - 80px);
+}
+
+.lastName {
+    margin-bottom: 3px;
+    border-bottom: 2px solid black;
+    width: 150px;
+}
+.input {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.item {
+    margin: 15px 0;
+}
+
+h3 {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 20px;
+}
+
+ins {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.image {
+    width: 272px;
+    height: 260px;
+    border: 1px solid white;
+    border-radius: 10px;
+
+}
+
+.Unversy {
+    margin-top: 10px;
+}
+
+.work {
+    max-width: 400px;
+
+}
+
+.scholl {
+    margin-top: 10px;
+}
