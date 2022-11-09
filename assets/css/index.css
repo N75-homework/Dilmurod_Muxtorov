@@ -14,8 +14,6 @@
     gap: 40px;
     width: 100wh;
     height: calc(100vh - 80px);
-    div{
-    }
 }
 
 .lastName {
