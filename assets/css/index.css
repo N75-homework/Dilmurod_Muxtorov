@@ -6,13 +6,16 @@
 .main {
     background-color: rgb(182, 179, 126);
     padding: 80px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
     color: rgb(255, 255, 255);
     gap: 40px;
     width: 100wh;
     height: calc(100vh - 80px);
+    div{
+    }
 }
 
 .lastName {
