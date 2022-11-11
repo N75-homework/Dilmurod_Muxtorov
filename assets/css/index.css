@@ -43,6 +43,6 @@ span {
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: rgb(146, 139, 139);
     color: #ffffff;
 }
