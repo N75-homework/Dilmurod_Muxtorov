@@ -1,68 +1,44 @@
-* {
-    margin: 0 auto;
+*{
     padding: 0;
-}
-
-.main {
-    background-color: rgb(182, 179, 126);
-    padding: 80px;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    
+    .container{
+     width: 1200px;
+     max-width: 100%;
+     margin:  auto auto;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+    }
+    h1{
     display: flex;
-    flex-direction: column;
-    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    }
+    .button_container{
+    width: 300px;
+    max-width: 100%;
     margin: 0 auto;
-    color: rgb(255, 255, 255);
-    gap: 40px;
-    width: 100wh;
-    height: calc(100vh - 80px);
-}
-
-.lastName {
-    margin-bottom: 3px;
-    border-bottom: 2px solid black;
-    width: 150px;
-}
-.input {
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
     align-items: center;
-}
-
-.item {
-    margin: 15px 0;
-}
-
-h3 {
-    font-size: 25px;
-    color: white;
-    margin-bottom: 5px;
-}
-
-p {
-    font-size: 20px;
-}
-
-ins {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.image {
-    width: 272px;
-    height: 260px;
-    border: 1px solid white;
-    border-radius: 10px;
-
-}
-
-.Unversy {
-    margin-top: 10px;
-}
-
-.work {
-    max-width: 400px;
-
-}
-
-.scholl {
-    margin-top: 10px;
-}
+    }
+    .btn{
+    padding:5px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    }
+    span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    margin-top: 30px;
+    }
+    .btn:hover{
+    background-color: black;
+    color: #ffffff;
+    }
