@@ -30,7 +30,7 @@ input {
     width: 260px;
     background-color: #ecf0f3;
     box-shadow: inset -5px -5px 12px #ffffff,
-                inset  5px 5px 12px rgba(0, 0, 0, .16);
+        inset 5px 5px 12px rgba(0, 0, 0, .16);
     border: none;
     border-radius: 30px;
     color: rgba(70, 70, 70, );
@@ -42,39 +42,41 @@ input {
     padding: 20px;
 }
 
-button{
-height: 48px;
-width: 48px;
-background-color:#ecf0f3;
-box-shadow: -5px -5px 12px #ffffff,
-             5px 5px 12px rgba(0, 0, 0, .16);
-             border:none; 
-             border-radius:50%;
-             margin: 8px;
-             font-size: 16px;  
+button {
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
 }
-.teng{
-width: 115px;
-border-radius:40px;
-background-color:#ecf0f3;
-box-shadow: -5px -5px 12px #ffffff,
-             5px 5px 12px rgba(0, 0, 0, .16);
-             border:none; 
-             margin: 8px;
-             font-size: 16px;  
+
+.teng {
+    width: 115px;
+    border-radius: 40px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    margin: 8px;
+    font-size: 16px;
 }
-.calculator_title{
+
+.calculator_title {
     padding-left: 40px;
     padding-top: 10px;
     font-family: 'DM Sans', sans-serif;
     height: 48px;
-width: 248px;
-background-color:#ecf0f3;
-box-shadow: -5px -5px 12px #ffffff,
-             5px 5px 12px rgba(0, 0, 0, .16);
-             border:none; 
-             border-radius:50%;
-             margin: 8px;
-             font-size: 16px;  
+    width: 248px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px #ffffff,
+        5px 5px 12px rgba(0, 0, 0, .16);
+    border: none;
+    border-radius: 40px;
+    margin: 8px;
+    font-size: 16px;
 
 }
