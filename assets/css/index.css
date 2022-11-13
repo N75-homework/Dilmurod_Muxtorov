@@ -63,3 +63,18 @@ box-shadow: -5px -5px 12px #ffffff,
              margin: 8px;
              font-size: 16px;  
 }
+.calculator_title{
+    padding-left: 40px;
+    padding-top: 10px;
+    font-family: 'DM Sans', sans-serif;
+    height: 48px;
+width: 248px;
+background-color:#ecf0f3;
+box-shadow: -5px -5px 12px #ffffff,
+             5px 5px 12px rgba(0, 0, 0, .16);
+             border:none; 
+             border-radius:50%;
+             margin: 8px;
+             font-size: 16px;  
+
+}
