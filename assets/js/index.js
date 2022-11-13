@@ -1,27 +1,20 @@
-let count = 0;
-const value = document.querySelector("#value")
-const btns = document.querySelectorAll(".btn")
+let outputScreen = document.getElementById("output-screen");
+function display(num) {
+  outputScreen.value += num;
+}
+function Calculate() {
+  try {
+    outputScreen.value = eval(outputScreen.value);
+  }
+  catch (err) {
+    alert("O'ylab yozing 😊")
+  }
 
-btns.forEach(function (btn) {
-  btn.addEventListener('click', function (e) {
-    const styles = e.currentTarget.classList;
-    if (styles.contains("decrease")) {
-      count--;
-    } else if (styles.contains("increase")) {
-      count++;
-    } else {
-      count = 0
-    }
-    if (count > 0) {
-      value.style.color = "red"
-    }
-    if (count < 0) {
-      value.style.color = "red"
-    }
-    if (count === 0) {
-      value.style.color = "red"
-    }
-    value.textContent = count;
-  })
-})
+}
+function Clear() {
+  outputScreen.value = "";
+}
+function del() {
+  outputScreen.value = outputScreen.value.slice(0, -1);
 
+}
