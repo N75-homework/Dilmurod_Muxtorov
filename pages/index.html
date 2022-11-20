@@ -6,47 +6,241 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Dosis:wght@300&family=Montserrat:wght@700&display=swap"
-        rel="stylesheet">
-    <title>Calculator</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 </head>
 
 <body>
-    <div class="container">
-        <div class="calculator">
-            <p class="calculator_title">by:Dilmurod_Muxtorov</p>
-            <input type="text" placeholder="0" id="output-screen">
-            <button onclick="Clear()">Clear</button>
-            <button onclick="del()">DEL</button>
-            <button onclick="display('%')">%</button>
-            <button onclick="display('/')">/</button>
-            <button onclick="display('7')">7</button>
-            <button onclick="display('8')">8</button>
-            <button onclick="display('9')">9</button>
-            <button onclick="display('*')">*</button>
-            <button onclick="display('4')">4</button>
-            <button onclick="display('5')">5</button>
-            <button onclick="display('6')">6</button>
-            <button onclick="display('-')">-</button>
-            <button onclick="display('1')">1</button>
-            <button onclick="display('2')">2</button>
-            <button onclick="display('3')">3</button>
-            <button onclick="display('+')">+</button>
-            <button onclick="display('.')">.</button>
-            <button onclick="display('0')">0</button>
-            <button onclick="Calculate()" class="teng">=</button>
-        </div>
-    </div>
+    <header>
+        <section class="header container">
+            <div class="header-title">
+                <ul class="header-line">
+                    <li>
+                        <img src="../assets/icons/gaz-T.svg" alt="">
+                    </li>
+                    <div class="header-li">
+                    </div>
+                    <li class="header-text">
+                        <p class="header-line_title">Расправь плечи <br>
+                            в теплом доме</p>
+                    </li>
+                </ul>
+                <section class="header-nav">
+                    <div class="header-nav_box">
+                        <img src="../assets/icons/moon.svg" alt="">
+                        <p>В любое время дня и ночи</p>
+                    </div>
+                    <div class="header-nav_box">
+                        <img src="../assets/icons/moon-1.svg" alt="">
+                        <p>Вне зависимости от погодных условий</p>
+                    </div>
+                </section>
+                <p class="p1">Доставим газ
+                    за 4 часа</p>
+                <div class="header-way">
+                    <p class="p2">в любую точку Москвы <br>
+                        и Московской области</p>
+                    <img class="header-img" src="../assets/icons/way.svg" alt="">
+                </div>
+                <button class="header-btn">
+                    <p class="p">Заказать доставку газа <br>
+                        в газгольдер
+                    </p>
+                </button>
+                <p class="p3">Доставка газа всегда по актуальным ценам</p>
+            </div>
+            <div class="header-gaz">
+                <ul class="header-gaz-menu">
+                    <li class="header-phone"><a href="tel:+998911528079">+7 926 330-68-34</a></li>
+                    <li class="header-gaz-text"> <a href=""> Срочный вопрос</a></li>
+                </ul>
+                <img class="header-gaz-photo" src="../assets/images/gaz-propan1.png" alt="">
+            </div>
+        </section>
+    </header>
+    <main>
+        <section class="propan">
+            <section class="propan-nav container">
+                <h1 class="h1">Стоимость газа в ваш газгольдер сегодня</h1>
+                <p class="p1">Идеальное соотношение</p>
+
+                <ul class="propan-nav-menu">
+                    <li class="propan-propan">
+                        <p class="p2">Пропан</p>
+                        <p class="p3">от 25 рублей за литр</p>
+                        <p class="p4">Физически испарение происходит до -40 градусов, что позволяет использовать его в
+                            наших с вами
+                            погодных условиях</p>
+                        <button class="propan-btn">
+                            <p>Заказать</p>
+                        </button>
+                    </li>
+                    <li>
+                        <section class="propan-money">
+                            <div class="propan-money-number">
+                                <ul>
+                                    <li class="li-number">80%</li>
+                                    <li class="li-text">пропана</li>
+                                </ul>
+                                <div></div>
+                                <ul>
+                                    <li class="li-number">20%</li>
+                                    <li class="li-text">бутана</li>
+                                </ul>
+                            </div>
+                            <div class="propan-money">
+                                <img src="../assets/images/propan-img.png" alt="">
+                            </div>
+                        </section>
+                    </li>
+                    <li class="propan-butan">
+                        <p class="p2">Бутан</p>
+                        <p class="p3">от 16 рублей за литр</p>
+                        <p class="p4">Испарение Бутана происходит только до 0 градусов и годится для использования в
+                            тёплое время года</p>
+                        <button class="propan-btn">
+                            <p>Заказать</p>
+                        </button>
+                    </li>
+                </ul>
+            </section>
+        </section>
+        <section class="rabota">
+            <section class="rabota-nav container">
+                <h1>Преимущества работы с нашей компанией</h1>
+                <ul class="rabota-nav-menu">
+                    <li class="li-2">
+                        <img src="../assets/icons/rabota-1.svg" alt="">
+                        <p class="p1">Экономия <br>
+                            на хранилище </p>
+                        <p class="p2">за счёт собственных цистерн <br>
+                            на нашей базе</p>
+                    </li>
+                    <li>
+                        <img src="../assets/icons/rabota-2.svg" alt="">
+                        <p class="p1">Экономия <br>
+                            на транспорте</p>
+                        <p class="p2">более 10 собственный газовозов</p>
+                    </li>
+                    <li class="li-1">
+                        <img src="../assets/icons/rabota-3.svg" alt="">
+                        <p class="p1">Поставки напрямую <br>
+                            от производителей</p>
+                        <p class="p2">нет наценки на стоимость газа как у <br> перекупщиков и небольших частных <br>
+                            компаний</p>
+                    </li>
+                </ul>
+                <ul class="rabota-nav-menu">
+                    <li class="li-2">
+                        <img src="../assets/icons/rabota-4.svg" alt="">
+                        <p class="p1">Любые объёмы поставки <br> качественного газа</p>
+                        <p class="p2">вы получаете объем от 1 тонны до 20 <br> тонн, с сертификатом качества газа</p>
+                    </li>
+                    <li>
+                        <img src="../assets/icons/rabota-5.svg" alt="">
+                        <p class="p1">Оплата удобным <br>
+                            для вас способом</p>
+                        <p class="p2">все газовозы оснащены терминалами для <br> оплаты вашего заказа</p>
+                    </li>
+                    <li class="li-1">
+                        <img src="../assets/icons/rabota-6.svg" alt="">
+                        <p class="p1">Чистый газ <br>
+                            без примесей/p>
+                        <p class="p2">нет наценки на стоимость газа как у <br> перекупщиков и небольших частных <br>
+                            компаний</p>
+                    </li>
+                </ul>
+                <ul class="rabota-nav-menu">
+                    <li class="li-2">
+                        <img src="../assets/icons/rabota-7.svg" alt="">
+                        <p class="p1">Длина заправочных <br>
+                            рукавов — 50 метров</p>
+                        <p class="p2">не требуется подъезд автомобиля <br> вплотную к резервуару/p>
+                    </li>
+                    <li>
+                        <img src="../assets/icons/rabota-8.svg" alt="">
+                        <p class="p1">Доставка сжиженного газа <br>
+                            в формате 24/7</p>
+                        <p class="p2">привезем газ в удобное для вас время <br> или же по графику</p>
+                    </li>
+                    <li class="li-1">
+                        <img src="../assets/icons/rabota-9.svg" alt="">
+                        <p class="p1">Аттестованный <br>
+                            персонал</p>
+                        <p class="p2">квалифицированные сотрудники <br> проведут полную консультацию и дадут <br>
+                            рекомендации, если такие нужны будут</p>
+                    </li>
+                </ul>
+                <div class="rabota-nav-footer">
+                    <div>
+                        <img src="../assets/icons/rabota-car.svg" alt="">
+                    </div>
+                    <div>
+                        <h4>Благодаря нашему собственному автопарку мы можем
+                            давать гарантию, что доставим <del>за 4 часа</del>
+                        </h4>
+                        <button>
+                            <p>Это сильное конкурентное преимущество, которым мы дорожим</p>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section class="zakaz">
+            <section class="container zakaz-btn">
+                <h1>Выберите свой объём Газовоза</h1>
+                <button class="tabBtn1">
+                    <p> Малый <br>
+                        2000 л.</p>
+                </button>
+                <button class="tabBtn2">
+                    <p>Средний <br>
+                        6000 л.</p>
+                </button>
+                <button class="tabBtn3">
+                    <p>Стандартный <br>
+                        10 000 л.</p>
+                </button>
+                <button class="tabBtn4">
+                    <p>Оптовый <br>
+                        40 000 л.</p>
+                </button>
+                <p id="tabContent"></p>
+            </section>
+            <div class="mySwiper volume__slide ">
+                <div class="swiper volume__swiper">
+                  <div class="swiper-wrapper volume__block" style="width: 560px;">
+                    <img src="/assets/images/01 2.png" alt="" class="swiper-slide" style="width: 560px;">
+                    <img src="/assets/images/02 1.png" alt="" class="swiper-slide" style="width: 560px;">
+                    <img src="/assets/images/03 1.png" alt="" class="swiper-slide" style="width: 560px;">
+                    <img src="/assets/images/04 1.png" alt="" class="swiper-slide" style="width: 560px;">
+                  </div>
+                  <!-- If we need pagination -->
+                  <!-- <div class="swiper-pagination"></div> -->
+                  <!-- If we need navigation buttons -->
+                  <!-- If we need scrollbar -->
+                  <!-- <div class="swiper-scrollbar"></div> -->
+                </div>
+                
+              </div>
+
+            <div class="zakaz-gaz-btn">
+                <p>Заказать газ</p>
+            </div>
+        </section>
+        <!-- <section class="klient">
+            <section class="klient-nav">
+                <p>Отзывы наших клиентов</p>
+            </section>
 
 
+        </section> -->
 
-    <script src="../assets/js/index.js">
+    </main>
 
-
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="../assets/js/index.js"></script>
 </body>
 
 </html>
