@@ -1,67 +1,31 @@
-// let data = [
-//     {
-//         image: `../assets/icons/car-1.svg`
+function makeItRain() {
+    let drops = '';
+    let increment = 0;
 
-//     },
-//     {
-//         image: `../assets/icons/car-2.svg`
-//     },
-//     {
-//         image: `../assets/icons/car-3.svg`
 
-//     },
-//     {
-//         image: `../assets/icons/car-4.svg`
+    while (increment < 98) {
+        increment += 1;
+        let delay = Math.floor(Math.random() * (90 - 1 + 1) + 1);
+        drops += '<div class="drop" style="left:' + increment + '%; animation-delay:0.' + delay + 's; animation-duration:0.8' + delay + 's;"><div class="stem" style="left:' + increment + '%;animation-delay:0.' + delay + 's; animation-duration:0.8' + delay + 's;"></div><div class="splash" style="left:' + increment + '%;animation-delay:0.' + delay + 's; animation-duration:0.8' + delay + 's;">    </div></div>'
+    }
+    document.getElementById('rain-container').innerHTML += drops;
+    document.getElementById('Audio').innerHTML += drops;
+}
 
-//     },
-// ]
+makeItRain()
 
 
 
-// let $tabBtn = document.querySelectorAll('.tabBtn')
-// let $tabContent = document.getElementById('tabContent')
 
 
-// $tabContent.innerHTML = `
-// <div>
-// <img src="${data[0].image}">
-// </div>`
-
-
-
-// for (let i = 0; i < $tabBtn.length; i++) {
-
-//     $tabBtn[i].addEventListener('click', () => {
-//         let htmlContent = `
-//      <div>
-//      <img width="400" src="${data[i].image}">
-//      </div>`
-
-//         $tabContent.innerHTML = htmlContent
-//     })
-
-
-// }
-const swiper = new Swiper('.swiper',{
-    navigation
-});
-let btn1 = document.querySelector('.tabBtn1'),
-    btn2 = document.querySelector('.tabBtn2'),
-    btn3 = document.querySelector('.tabBtn3'),
-    btn4 = document.querySelector('.tabBtn4');
-
-btn1.addEventListener('click', (e) => {
-   
-    swiper.slideTo(0, 210)
-})
-btn2.addEventListener('click', (e) => {
-
-    swiper.slideTo(1, 210)
-})
-btn3.addEventListener('click', (e) => {
-
-    swiper.slideTo(2, 210)
-})
-btn4.addEventListener('click', (e) => {
-    swiper.slideTo(3, 210)
-});
+function validate() {
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+    if (username == "admin" && password == "user") {
+        alert("login succesfully");
+        return false
+    }
+    else{
+    alert("login falied")
+    }
+}
