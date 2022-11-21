@@ -12,11 +12,9 @@ body {
 
 
 
-.eye { padding-left: 10px;
-    margin-left: -110px;
-    padding-top: 10px;
-    color:rgba(0, 0, 0, 0.4);
-    cursor: pointer;
+.eye { 
+    background: url(/assets/icons/eye-svgrepo-com.svg);
+    
 }
 .eye:hover{
 color:rgb(181, 165, 165);}
@@ -158,3 +156,6 @@ color:rgb(181, 165, 165);}
         transform: scale(1.5);
     }
 }
+
+
+
