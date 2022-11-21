@@ -25,3 +25,36 @@ function validate() {
     alert("login falied")
     }
 }
+
+
+
+var $form = document.getElementById("form");
+var $text = document.getElementById("username");
+var $password = document.getElementById("password");
+
+
+var passwordField = document.querySelector('.password')
+var show = document.querySelector('.show')
+var hide = document.querySelector('.hide')
+
+
+$form.addEventListener("submit", function(evt){
+    evt.preventDefault()
+    
+    // console.log(typeof($text.value));
+    // console.log(typeof($password.value));
+    $text.value = ""
+    $password.value = ""
+})
+
+show.onclick = function () {
+    passwordField.setAttribute("type", "text");
+    show.style.display = "none"
+    hide.style.display = "block"
+}
+
+hide.onclick = function () {
+    passwordField.setAttribute("type", "password");
+    hide.style.display = "none"
+   show.style.display = "block"
+}

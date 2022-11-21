@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/brands.min.css"
-        integrity="sha512-G/T7HQJXSeNV7mKMXeJKlYNJ0jrs8RsWzYG7rVACye+qrcUhEAYKYzaa+VFy6eFzM2+/JT1Q+eqBbZFSHmJQew=="
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/index.css">
     <title>Login</title>
@@ -23,11 +23,12 @@
             <div class="splash"></div>
         </div>
     </div>
-    <form class="box" action="./index.html" method="POST">
+    <form id="from" class="box" action="./index.html" method="POST">
         <h1>Login</h1>
         <input type="text" name="" placeholder="Enter Username" id="username">
-        <input type="password" name="" placeholder=" Enter Password" id="password">
-        <span><i class="fa fa-eye" aria-hidden="true"></i></i></span>
+        <input type="password" name="" placeholder=" Enter Password" id="password" class="password">
+        <!-- <i class="show fa fa-eye"></i>
+            <i class="hide fa fa-eye-slash"></i> -->
         <input type="submit" name="" value="Login" onclick="validate()" href="./index.html">
     </form>
 

@@ -9,6 +9,18 @@ body {
   background-position: center;
 }
 
+.eye {
+  padding-left: 10px;
+  margin-left: -110px;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+.eye:hover {
+  color: rgb(181, 165, 165);
+}
+
 .box {
   border-radius: 40px;
   width: 300px;
