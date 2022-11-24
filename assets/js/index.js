@@ -5,7 +5,6 @@ let add = document.querySelectorAll('.achchiq_hayot')
 let userArray = []
 $form.addEventListener("submit", (evt) => {
     evt.preventDefault()
-
     let { user_name, user_phone, user_email, meatA, size, } = evt.target.elements
     let pizza_arr = [];
     let price_arr1 = [];
@@ -15,7 +14,6 @@ $form.addEventListener("submit", (evt) => {
     let size_arr1 = [];
     let thin_arr = [];
     let thin_arr1 = [];
-
     for (let i = 0; i < pizza.length; i++) {
         if (pizza[i].checked) {
             pizza_arr.push(pizza[i].value)
@@ -41,7 +39,6 @@ $form.addEventListener("submit", (evt) => {
             thin_arr1.push(Number(meatA[i].dataset.price))
         }
     }
-
     let dollor1 = price_arr1.map(a => b+=a, b=0).reverse()[0],
     dollor2 =  paper_arr1.map(a => b+=a, b=0).reverse()[0],
     dollor3 = size_arr1.map(a => b+=a, b=0).reverse()[0],
@@ -55,8 +52,6 @@ $form.addEventListener("submit", (evt) => {
             array.push(add[i].value)
         }
     }
-
-
     let newObj = {
         id: userArray.length + 1,
         name: user_name.value.trim(),
@@ -75,9 +70,7 @@ $form.addEventListener("submit", (evt) => {
     userArray.push(newObj)
     console.log(userArray);
     renderFunction(userArray, $list)
-
 })
-
 var renderFunction = (array, element) => {
     element.innerHTML = null
     for (let i = 0; i < array.length; i++) {
@@ -98,64 +91,11 @@ var renderFunction = (array, element) => {
             <p class="sale-menu-p1">on-Pizza: ${array[i].total_pizza}$</p>
             <p class="sale-menu-p1">Add-Pizza: ${array[i].add_pizza}$</p>
             <p class="sale-menu-p1">Total: ${array[i].total}$</p>
-
             </li>
         `
     }
 }
-
 renderFunction(userArray, $list)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function makeItRain() {
     let drops = '';
     let increment = 0;
@@ -169,7 +109,6 @@ function makeItRain() {
     document.getElementById('rain-container').innerHTML += drops;
     document.getElementById('Audio').innerHTML += drops;
 }
-
 makeItRain()
 
 
