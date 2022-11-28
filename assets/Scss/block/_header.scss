@@ -442,6 +442,10 @@ header {
         z-index: -1;
     }
 
+    .Dilmurod {
+        text-align: center;
+    }
+
 
 
     @keyframes button {
@@ -528,7 +532,8 @@ header {
 
 
 }
-@media (max-width:788px){
+
+@media (max-width:788px) {
     header video {
         position: absolute;
         width: 520%;
