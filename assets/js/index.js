@@ -1,175 +1,89 @@
-let $form = document.querySelector("#form");
-let $list = document.querySelector('#list')
-let pizza = document.querySelectorAll('.inputlar')
-let add = document.querySelectorAll('.achchiq_hayot')
-let userArray = []
-$form.addEventListener("submit", (evt) => {
-    evt.preventDefault()
+let left_btn = document.getElementsByClassName('bi-chevron-double-left')[0];
+let right_btn = document.getElementsByClassName('bi-chevron-double-right')[0];
+let cards = document.getElementsByClassName('cards')[0];
+let search = document.getElementsByClassName('search')[0];
+let search_input = document.getElementById('search_input');
 
-    let { user_name, user_phone, user_email, meatA, size, } = evt.target.elements
-    let pizza_arr = [];
-    let price_arr1 = [];
-    let paper_arr = [];
-    let paper_arr1 = [];
-    let size_arr = [];
-    let size_arr1 = [];
-    let thin_arr = [];
-    let thin_arr1 = [];
-
-    for (let i = 0; i < pizza.length; i++) {
-        if (pizza[i].checked) {
-            pizza_arr.push(pizza[i].value)
-            price_arr1.push(Number(pizza[i].dataset.price))
-        }
-    }
-
-    for (let i = 0; i < add.length; i++) {
-        if (add[i].checked) {
-            paper_arr.push(add[i].value)
-            paper_arr1.push(Number(add[i].dataset.price))
-        }
-    }
-    for (let i = 0; i < size.length; i++) {
-        if (size[i].checked) {
-            size_arr.push(size[i].value)
-            size_arr1.push(Number(size[i].dataset.price))
-        }
-    }
-    for (let i = 0; i < meatA.length; i++) {
-        if (meatA[i].selected) {
-            thin_arr.push(meatA[i].value)
-            thin_arr1.push(Number(meatA[i].dataset.price))
-        }
-    }
-
-    let dollor1 = price_arr1.map(a => b+=a, b=0).reverse()[0],
-    dollor2 =  paper_arr1.map(a => b+=a, b=0).reverse()[0],
-    dollor3 = size_arr1.map(a => b+=a, b=0).reverse()[0],
-    dollor4 = thin_arr1.map(a => b+=a, b=0).reverse()[0],
-    dollor =  dollor1 + dollor2 + dollor3 + dollor4;
-
-
-    let array = [];
-    for (i = 0; i < add.length; i++) {
-        if (add[i].checked) {
-            array.push(add[i].value)
-        }
-    }
-
-
-    let newObj = {
-        id: userArray.length + 1,
-        name: user_name.value.trim(),
-        phone: user_phone.value.trim(),
-        email: user_email.value.trim(),
-        meat: meatA.value.trim(),
-        size: size.value.trim(),
-        on: pizza_arr.join(', '),
-        added: array.join(', '),
-        total_pizza: price_arr1.map(a => b+=a, b=0).reverse()[0],
-        add_pizza: paper_arr1.map(a => b+=a, b=0).reverse()[0],
-        size_pizza: size_arr1.map(a => b+=a, b=0).reverse()[0],
-        thickness_pizza: thin_arr1.map(a => b+=a, b=0).reverse()[0],
-        total:dollor
-    }
-    userArray.push(newObj)
-    console.log(userArray);
-    renderFunction(userArray, $list)
-
+left_btn.addEventListener('click', () => {
+    cards.scrollLeft -= 140;
 })
+right_btn.addEventListener('click', () => {
+    cards.scrollLeft += 140;
+});
 
-var renderFunction = (array, element) => {
-    element.innerHTML = null
-    for (let i = 0; i < array.length; i++) {
-        element.innerHTML += `
-            <li class="li-1">
-            <p class="sale-menu"> User id: ${array[i].id}</p>
-            <p class="sale-menu-p1">Name: ${array[i].name}</p>
-            <p class="sale-menu-p1">Phone: ${array[i].phone}</p>
-            <p class="sale-menu-p1">Email: ${array[i].email}</p>
-            </li>
-            <li class="li-2">
-            <p class="sale-menu-p1">Meat: ${array[i].meat}</p>
-            <p class="sale-menu-p1">Size: ${array[i].size}</p>
-            <p class="sale-menu-p1">Pizza: ${array[i].on}</p>
-            <p class="sale-menu-p1">Added: ${array[i].added}</p>
-            <p class="sale-menu-p1">Thickness-Pizza: ${array[i].thickness_pizza}$</p>
-            <p class="sale-menu-p1">Size-Pizza: ${array[i].size_pizza}$</p>
-            <p class="sale-menu-p1">on-Pizza: ${array[i].total_pizza}$</p>
-            <p class="sale-menu-p1">Add-Pizza: ${array[i].add_pizza}$</p>
-            <p class="sale-menu-p1">Total: ${array[i].total}$</p>
+let json_url = "/assets/json/movie.json";
 
-            </li>
-        `
-    }
-}
-
-renderFunction(userArray, $list)
-
-
-
-
-
-
+fetch(json_url).then(Response => Response.json())
+    .then((data) => {
+        data.forEach((ele, i) => {
+            let { name, imdb, date, sposter, bposter, genre, url, } = ele;
+            let card = document.createElement('a');
+            card.classList.add('card');
+            card.href = url;
+            card.innerHTML = `
+            <img src="${sposter}" alt="${name}" class="poster">
+                    <div class="rest_card">
+                        <img src="${bposter}" alt="">
+                        <div class="cont">
+                            <h4>${name}</h4>
+                            <div class="sub">
+                                <p>${genre}, ${date}</p>
+                                <h3><span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    `
+            cards.appendChild(card);
+        });
+        document.getElementById('title').innerText = data[0].name;
+        document.getElementById('gen').innerText = data[0].genre;
+        document.getElementById('date').innerText = data[0].date;
+        document.getElementById('rate').innerHTML = `<span>IMDB</span><i class="bi bi-star-fill"></i>${data[0].imdb}`;
 
 
+        data.forEach(element => {
+            let { name, imdb, date, sposter, genre, url, } = element;
+            let card = document.createElement('a');
+            card.classList.add('card');
+            card.href = url;
+            card.innerHTML = `
+            <img src="${sposter}" alt="">
+            <div class="cont">
+                <h3>${name}</h3>
+                <p>${genre},${date}, <span>IMDB</span><i class="bi bi-star-fill"></i>${imdb}
+                </p>
+            </div>
+                    `
+            search.appendChild(card);
+
+        });
 
 
+        search_input.addEventListener('keyup', () => {
+            let filter = search_input.value.toUpperCase();
+            let a = search.getElementsByTagName('a');
 
 
+            for (let index = 0; index < a.length; index++) {
+                let b = a[index].getElementsByClassName('cont')[0];
+                let TextValue = b.textContent || b.innerText;
+                if (TextValue.toUpperCase().indexOf(filter) > -1) {
+                    a[index].style.display = "flex";
+                    search.style.visibility = "visible";
+                    search.style.opacity = 1;
+                }
+                else {
+                    a[index].style.display = "none";
+                }
+                if (search_input.value == 0) {
+                    search.style.visibility = "hidden";
+                    search.style.opacity = 0 ;
+                
+                }
 
+            }
 
+        })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function makeItRain() {
-    let drops = '';
-    let increment = 0;
-
-
-    while (increment < 98) {
-        increment += 1;
-        let delay = Math.floor(Math.random() * (190 - 1 + 1) + 1);
-        drops += '<div class="drop" style="left:' + increment + '%; animation-delay:0.' + delay + 's; animation-duration:0.8' + delay + 's;"><div class="stem" style="left:' + increment + '%;animation-delay:0.' + delay + 's; animation-duration:0.8' + delay + 's;"></div><div class="splash" style="left:' + increment + '%;animation-delay:0.' + delay + 's; animation-duration:0.8' + delay + 's;">    </div></div>'
-    }
-    document.getElementById('rain-container').innerHTML += drops;
-    document.getElementById('Audio').innerHTML += drops;
-}
-
-makeItRain()
-
+    });
 
